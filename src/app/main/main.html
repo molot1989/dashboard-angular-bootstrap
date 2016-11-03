@@ -1,0 +1,33 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-7">
+      <ul class="new-users">
+        <li ng-repeat='item in main.notifUsers'>
+          <a href="/user/{{item.id}}" class="thumb">
+            <img ng-src="{{item.photo}}"/>
+          </a>
+          <p>
+            <a href="index/user/{{item.id}}">{{item.userName}} </a>{{item.action.activity}}
+            <a href="index/user/{{item.action.inviteId}}">{{item.action.inviteName}}</a>
+          </p>
+          <p>{{item.date | date:'medium'}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-3">
+      <div class="ibox-content">
+        <div class="stat-name">
+          <h2>Статистика</h2>
+          <div>На {{main.statistic.date | date:'dd.MM.yyyy'}}</div>
+        </div>
+        <div class="statistic-list">
+          <p>Всего участников <span>{{main.statistic.repaid}}</span></p>
+          <p>Новых участников <span>{{main.statistic.repaid}}</span></p>
+          <p>Доступны ваучеры <span>{{main.statistic.repaid}}</span></p>
+          <p>Погашенно ваучеров <span>{{main.statistic.repaid}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
